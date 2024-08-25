@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Perfil de Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item lines="none">
+    <ion-avatar slot="start">
+      <img src="..." alt="Foto de {{ usuario}}">
+    </ion-avatar>
+    <ion-label>
+      <h2>{{ usuario}}</h2>
+      <p>{{ email }}</p>
+      <ion-button fill="clear" color="primary" routerLink="/modificardatos">
+        <ion-icon name="pencil" slot="start"></ion-icon>
+        Modificar
+      </ion-button>
+    </ion-label>
+  </ion-item>
+</ion-content>

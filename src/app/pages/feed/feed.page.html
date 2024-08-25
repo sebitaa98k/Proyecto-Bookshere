@@ -1,0 +1,94 @@
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Bookshere</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"> 
+    <ion-list>
+      <ion-item button (click)="irPerfilUsuario()">
+        <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+        <ion-label>{{usuario}}</ion-label>
+      </ion-item>
+      <ion-item button (click)="cerrarSesion()">
+        <ion-icon slot="start" name="exit-outline"></ion-icon>
+        <ion-label>Cerrar Sesion</ion-label>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="true" class="ion-padding">
+    <ion-searchbar placeholder="Buscar por Título, Autor, ISBN" color="dark">
+    </ion-searchbar>
+    
+
+    <!-- Sección de Mis Libros -->
+    <ion-text color="primary">
+      <h2>Mis Libros</h2>
+    </ion-text>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-img src="assets/img/mis-libros1.jpg"></ion-img>
+        </ion-col>
+        <ion-col size="4">
+          <ion-img src="assets/img/mis-libros2.jpg"></ion-img>
+        </ion-col>
+        <ion-col size="4">
+          <ion-img src="assets/img/mis-libros3.jpg"></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- Sección de Libros Populares -->
+    <ion-text color="primary">
+      <h2>Libros Populares</h2>
+    </ion-text>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-img src="assets/img/romperelcirculo.webp"></ion-img>
+        </ion-col>
+        <ion-col size="4">
+          <ion-img src="assets/img/alasdesangre.webp"></ion-img>
+        </ion-col>
+        <ion-col size="4">
+          <ion-img src="assets/img/tanpocavida.webp"></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- Sección de Categoría de Libros -->
+    <ion-text color="primary">
+      <ion-router-link routerLink="/categorias">
+        <h2>Categoría de Libros</h2>
+      </ion-router-link>
+    </ion-text>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-text color="primary">Clásicos</ion-text>
+          <ion-img src="assets/img/categoriaclasicos.jpeg"></ion-img>
+        </ion-col>
+        <ion-col size="4">
+          <ion-text color="primary">Terror</ion-text>
+          <ion-img src="assets/img/categoriaterror.avif"></ion-img>
+        </ion-col>
+        <ion-col size="4">
+          <ion-text color="primary">Fantasía</ion-text>
+          <ion-img src="assets/img/categoriafantasia.jpeg"></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</div>
