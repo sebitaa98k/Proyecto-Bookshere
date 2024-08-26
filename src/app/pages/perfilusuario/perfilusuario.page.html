@@ -1,7 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-button>
+        <ion-icon slot="start" name="arrow-back"></ion-icon>
+      </ion-button>
     </ion-buttons>
     <ion-title>Perfil de Usuario</ion-title>
   </ion-toolbar>
@@ -10,7 +12,7 @@
 <ion-content [fullscreen]="true">
   <ion-item lines="none">
     <ion-avatar slot="start">
-      <img src="..." alt="Foto de {{ usuario}}">
+      <img src="..." alt="Foto de {{ usuario}}" />
     </ion-avatar>
     <ion-label>
       <h2>{{ usuario}}</h2>

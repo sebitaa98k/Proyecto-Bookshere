@@ -1,9 +1,3 @@
 Pages
--feed
--registrarse
--login
--perfilusuario
--categorias
+.recuperar contraseña 2
 -notfound
--cada-libro
--

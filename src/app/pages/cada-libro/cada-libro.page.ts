@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-cada-libro',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadaLibroPage implements OnInit {
 
-  constructor() { }
+  libro: any;
+
+  constructor() {}
 
   ngOnInit() {
   }

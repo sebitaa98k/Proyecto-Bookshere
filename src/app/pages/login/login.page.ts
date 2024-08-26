@@ -36,10 +36,10 @@ export class LoginPage implements OnInit {
     });
   }
 
-  async MostrarAlerta(message: string) {
+  async MostrarAlerta(mensaje: string) {
     const alerta = await this.alertcontroller.create({
       header: 'Error',
-      message: message,
+      message: mensaje,
       buttons: ['OK'],
     });
     await alerta.present();
@@ -61,7 +61,7 @@ export class LoginPage implements OnInit {
       };
       this.router.navigate(['/feed'], navigationextras);
     } else if(this.usuario===this.usuarioAdmin && this.password===this.passwordAdmin){
-      console.log("Entrando a vista de admin")
+      this.router.navigate(['/administrador'])
     }else{
       this.MostrarAlerta('Los datos son incorrectos');
     }
