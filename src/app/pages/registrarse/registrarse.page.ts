@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
+import { AlertController, MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-registrarse',
@@ -16,7 +16,10 @@ export class RegistrarsePage implements OnInit {
 
 
     // el alertcontroller es para las pantallaz de errores emergentes, bueno no necesariamente de errores
-  constructor(private router:Router, private alertcontroller: AlertController) { }
+  constructor(private router:Router, private alertcontroller: AlertController, private menuController: MenuController) {
+    this.menuController.enable(false, 'MenuPrincipal')
+    this.menuController.enable(false, 'MenuAdministrador')
+   }
 
   async MostrarAlerta(message: string){
     const alerta = await this.alertcontroller.create({

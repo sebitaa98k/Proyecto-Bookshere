@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-perfilusuario',
@@ -8,24 +9,28 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class PerfilusuarioPage implements OnInit {
 
-  usuario : string = "";
-  password : string = "";
-  email : string = "";
+  usuario : string = "Usuario";
+  password : string = "1234";
+  email : string = "Usuario@example.cl";
 
+  Libro1 : any = { titulo: 'Harry Potter y la Orden del Fénix', autor: 'J.K. Rowling', imagen: 'assets/img/librohp5.webp' }
+  Libro2 : any = { titulo: 'Harry Potter y el cáliz de fuego', autor: 'J.K. Rowling', imagen: 'assets/img/librohp4.webp' }
+  Libro3 : any = { titulo: 'Harry Potter y el prisionero de Azkaban', autor: 'J.K. Rowling', imagen: 'assets/img/librohp3.webp' }
 
-
-  constructor(private router: Router, private activaterouter:ActivatedRoute) {
-    this.activaterouter.queryParams.subscribe((param)=>{
-      if(this.router.getCurrentNavigation()?.extras.state){
-        this.usuario = this.router.getCurrentNavigation()?.extras?.state?.['usuario'],
-        this.password = this.router.getCurrentNavigation()?.extras?.state?.['password'],
-        this.email = this.router.getCurrentNavigation()?.extras?.state?.['email']
-      }
-    })
-
+  constructor(private menuController: MenuController, private router : Router) {
+    
+// CONFIGURACIONES MENU
+    this.menuController.enable(true, 'MenuPrincipal');
+    this.menuController.enable(false, 'MenuAdministrador');
    }
 
   ngOnInit() {
+  }
+
+
+  irModificarPerfil(){
+
+    this.router.navigate(['/modificar-perfil-usuario'])
   }
 
 }

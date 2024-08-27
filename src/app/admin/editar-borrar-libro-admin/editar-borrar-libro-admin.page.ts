@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-editar-borrar-libro-admin',
@@ -33,7 +34,12 @@ export class EditarBorrarLibroAdminPage implements OnInit {
     { titulo: 'Tan Poca Vida', autor: 'Hanya Yanagihara', imagen: 'assets/img/tanpocavida.webp' },
   ];
   
-  constructor() { }
+  constructor(private menuController: MenuController) {
+    
+    // CONFIGURACIONES MENU
+        this.menuController.enable(true, 'MenuAdministrador');
+        this.menuController.enable(false, 'MenuPrincipal');
+       }
 
   ngOnInit() {
   }

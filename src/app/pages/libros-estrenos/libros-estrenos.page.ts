@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-libros-estrenos',
@@ -13,7 +14,12 @@ export class LibrosEstrenosPage implements OnInit {
     {titulo: 'Mesa para dos', autor: 'Amor Towles', imagen: 'assets/img/mesaparados.webp', descripcion: 'Una mesa para dos porfavor, con esa frase comienza la gran obra literaria de amor prohibido entre dos amantes que solo esperan un final tragico entre ellos',FechaEstreno:'05 de septiembre de 2024'},
     {titulo: 'El mejor libro del mundo', autor: 'Manuel Vilas', imagen: 'assets/img/Elmejorlibrodelmundo.webp', descripcion: 'Todo en literatura es pura ficción. Este libro cuenta la verdad que nadie dice.',FechaEstreno:'18 de octubre de 2024'}
   ]
-  constructor() { }
+  constructor(private menuController: MenuController) { 
+
+    this.menuController.enable(true, 'MenuPrincipal');
+    this.menuController.enable(false, 'MenuAdministrador');
+    
+  }
 
   ngOnInit() {
   }

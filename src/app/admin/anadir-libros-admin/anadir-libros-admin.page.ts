@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-anadir-libros-admin',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnadirLibrosAdminPage implements OnInit {
 
-  constructor() { }
+  constructor(private menuController: MenuController) {
+    
+    // CONFIGURACIONES MENU
+        this.menuController.enable(true, 'MenuAdministrador');
+        this.menuController.enable(false, 'MenuPrincipal');
+       }
 
   ngOnInit() {
   }

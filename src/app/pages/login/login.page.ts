@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AlertController, MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -16,14 +16,22 @@ export class LoginPage implements OnInit {
   usuarioV: string = '';
   passwordV: string = '';
 
-  usuarioAdmin : string = 'ADMIN';
-  passwordAdmin : string = 'colocolo';
+  usuarioAdmin: string = 'ADMIN';
+  passwordAdmin: string = 'colocolo';
 
   constructor(
     private router: Router,
     private activaterouter: ActivatedRoute,
-    private alertcontroller: AlertController
+    private alertcontroller: AlertController,
+    private menuControlelr: MenuController
   ) {
+    //Eliminar los menus de esta pagina
+
+    this.menuControlelr.enable(false, 'MenuPrincipal');
+    this.menuControlelr.enable(false, 'MenuAdministrador');
+
+    //Recepcionar los datos que vienen de registrar usuario
+
     this.activaterouter.queryParams.subscribe((param) => {
       if (this.router.getCurrentNavigation()?.extras.state) {
         this.emailV =
@@ -36,6 +44,8 @@ export class LoginPage implements OnInit {
     });
   }
 
+  //funcion asincronica que crea una alerta
+
   async MostrarAlerta(mensaje: string) {
     const alerta = await this.alertcontroller.create({
       header: 'Error',
@@ -45,6 +55,9 @@ export class LoginPage implements OnInit {
     await alerta.present();
   }
 
+  //Funcion para iniciar sesion, tiene condiciones para evitar que no se ingresen datos, que los datos sean incorrectos
+  //o para entrar como administrador
+
   inicioSesion() {
     if (!this.usuario || !this.password) {
       this.MostrarAlerta('Debe ingresar datos');
@@ -52,18 +65,14 @@ export class LoginPage implements OnInit {
       this.usuario === this.usuarioV &&
       this.password === this.passwordV
     ) {
-      let navigationextras: NavigationExtras = {
-        state: {
-          usuario: this.usuario,
-          email: this.emailV,
-          password  : this.password
-        },
-      };
-      this.router.navigate(['/feed'], navigationextras);
-    } else if(this.usuario===this.usuarioAdmin && this.password===this.passwordAdmin){
-      this.router.navigate(['/administrador'])
-    }else{
-      this.MostrarAlerta('Los datos son incorrectos');
+      this.router.navigate(['/feed']);
+    } else if (
+      this.usuario === this.usuarioAdmin &&
+      this.password === this.passwordAdmin
+    ) {
+      this.router.navigate(['/administrador']);
+    } else {
+      this.MostrarAlerta('Los datos son incorrectos o no se creo un usuario');
     }
   }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -9,9 +10,6 @@ import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 })
 export class FeedPage implements OnInit {
 
-  usuario : string = "";
-  email : string = "";
-  password : string = "";
 
  
   libros: any[] = [
@@ -45,42 +43,16 @@ export class FeedPage implements OnInit {
 
 
 
-  constructor(private router : Router, private activaterouter: ActivatedRoute){
-    this.activaterouter.queryParams.subscribe(param => {
-      if(this.router.getCurrentNavigation()?.extras.state){
-        this.usuario = this.router.getCurrentNavigation()?.extras?.state?.['usuario'];
-        this.email = this.router.getCurrentNavigation()?.extras?.state?.['email'];
-        this.password = this.router.getCurrentNavigation()?.extras?.state?.['password'];
-      }
-    })
+  constructor(private router : Router, private activaterouter: ActivatedRoute, private menuController: MenuController){
+  /// Menu controller    
+    this.menuController.enable(true, 'MenuPrincipal');
+    this.menuController.enable(false, 'MenuAdministrador');
+    
    }
 
 
-  cerrarSesion(){
-    this.router.navigate(['/login'])
-  }
-  irPerfilUsuario(){
-    let navigationextras: NavigationExtras = {
-      state:{
-        usuario : this.usuario,
-        password : this.password,
-        email: this.email
-      }
-    }
-    this.router.navigate(['/perfilusuario'], navigationextras)
-  }
-
-  irTodosLosLibros(){
-    let navigationextras : NavigationExtras={
-      state:{
-        libros: this.libros
-      }
-    }
-
-    this.router.navigate(['/todos-los-libros'],navigationextras)
-  }
 
   ngOnInit() {
+ 
   }
-
 }
