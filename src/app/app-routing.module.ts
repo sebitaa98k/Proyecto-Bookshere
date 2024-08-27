@@ -71,6 +71,27 @@ const routes: Routes = [
     path: 'cambiar-contra',
     loadChildren: () => import('./pages/cambiar-contra/cambiar-contra.module').then( m => m.CambiarContraPageModule)
   },
+  {
+    path: 'editar-borrar-libro-admin',
+    loadChildren: () => import('./admin/editar-borrar-libro-admin/editar-borrar-libro-admin.module').then( m => m.EditarBorrarLibroAdminPageModule)
+  },
+  {
+    path: 'acercade',
+    loadChildren: () => import('./pages/acercade/acercade.module').then( m => m.AcercadePageModule)
+  },
+  {
+    path: 'recomendaciones',
+    loadChildren: () => import('./pages/recomendaciones/recomendaciones.module').then( m => m.RecomendacionesPageModule)
+  },
+  {
+    path: 'ajustes',
+    loadChildren: () => import('./pages/ajustes/ajustes.module').then( m => m.AjustesPageModule)
+  },
+  {
+    path: '**',
+    loadChildren: () => import('./pages/notfound/notfound.module').then( m => m.NotfoundPageModule)
+  },
+
 ];
 
 @NgModule({

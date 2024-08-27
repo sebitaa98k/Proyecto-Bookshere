@@ -15,29 +15,29 @@ export class FeedPage implements OnInit {
 
  
   libros: any[] = [
-    //lista de libros clasicos
-    { title: '1984', author: 'George Orwell', image: 'assets/img/libro1984.jpg' },
-    { title: 'El gran Gatsby', author: 'F. Scott Fitzgerald', image: 'assets/img/librogatsby.jpeg' },
-    { title: 'Orgullo y prejuicio', author: 'Jane Austen', image: 'assets/img/libroorgulloyprej.webp' },
-    //Lista de libros de fantasia
-    { title: 'El Hobbit', author: 'J.R.R. Tolkien', image: 'assets/img/librohobbit.webp' },
-    { title: 'Harry Potter y la piedra filosofal', author: 'J.K. Rowling', image: 'assets/img/librohp1.webp' },
-    { title: 'Harry Potter y la cámara secreta', author: 'J.K. Rowling', image: 'assets/img/librohp2.webp' },
-    { title: 'Harry Potter y el prisionero de Azkaban', author: 'J.K. Rowling', image: 'assets/img/librohp3.webp' },
-    { title: 'Harry Potter y el cáliz de fuego', author: 'J.K. Rowling', image: 'assets/img/librohp4.webp' },
-    { title: 'Harry Potter y la Orden del Fénix', author: 'J.K. Rowling', image: 'assets/img/librohp5.webp' },
-    { title: 'Harry Potter y el misterio del príncipe', author: 'J.K. Rowling', image: 'assets/img/librohp6.webp' },
-    { title: 'Harry Potter y las reliquias de la Muerte', author: 'J.K. Rowling', image: 'assets/img/librohp7.avif' },
-    { title: 'Cancion de hielo y fuego: Juego de tronos', author: 'George R.R. Martin', image: 'assets/img/librogot1.webp' },
-    { title: 'Alas de sangre', author: 'Rebecca Yarros', image: 'assets/img/alasdesangre.webp' },
-
-    //lista de libros de terror
-    { title: 'It', author: 'Stephen King', image: 'assets/img/libroIt.webp' },
-    { title: 'La maldición de Hill House', author: 'Shirley Jackson', image: 'assets/img/librohillhouse.webp' },
-    { title: 'El Exorcista', author: 'William Peter Blatty', image: 'assets/img/libroexorcista.webp' },
-    //agregar mas categorias romperelcirculo
-    { title: 'Romper el circulo', author: 'Colleen Hoover', image: 'assets/img/romperelcirculo.webp' },
-    { title: 'Tan Poca Vida', author: 'Hanya Yanagihara', image: 'assets/img/tanpocavida.webp' },
+    // lista de libros clásicos
+    { titulo: '1984', autor: 'George Orwell', imagen: 'assets/img/libro1984.jpg' },
+    { titulo: 'El gran Gatsby', autor: 'F. Scott Fitzgerald', imagen: 'assets/img/librogatsby.jpeg' },
+    { titulo: 'Orgullo y prejuicio', autor: 'Jane Austen', imagen: 'assets/img/libroorgulloyprej.webp' },
+    // Lista de libros de fantasía
+    { titulo: 'El Hobbit', autor: 'J.R.R. Tolkien', imagen: 'assets/img/librohobbit.webp' },
+    { titulo: 'Harry Potter y la piedra filosofal', autor: 'J.K. Rowling', imagen: 'assets/img/librohp1.webp' },
+    { titulo: 'Harry Potter y la cámara secreta', autor: 'J.K. Rowling', imagen: 'assets/img/librohp2.webp' },
+    { titulo: 'Harry Potter y el prisionero de Azkaban', autor: 'J.K. Rowling', imagen: 'assets/img/librohp3.webp' },
+    { titulo: 'Harry Potter y el cáliz de fuego', autor: 'J.K. Rowling', imagen: 'assets/img/librohp4.webp' },
+    { titulo: 'Harry Potter y la Orden del Fénix', autor: 'J.K. Rowling', imagen: 'assets/img/librohp5.webp' },
+    { titulo: 'Harry Potter y el misterio del príncipe', autor: 'J.K. Rowling', imagen: 'assets/img/librohp6.webp' },
+    { titulo: 'Harry Potter y las reliquias de la Muerte', autor: 'J.K. Rowling', imagen: 'assets/img/librohp7.avif' },
+    { titulo: 'Canción de hielo y fuego: Juego de tronos', autor: 'George R.R. Martin', imagen: 'assets/img/librogot1.webp' },
+    { titulo: 'Alas de sangre', autor: 'Rebecca Yarros', imagen: 'assets/img/alasdesangre.webp' },
+  
+    // lista de libros de terror
+    { titulo: 'It', autor: 'Stephen King', imagen: 'assets/img/libroIt.webp' },
+    { titulo: 'La maldición de Hill House', autor: 'Shirley Jackson', imagen: 'assets/img/librohillhouse.webp' },
+    { titulo: 'El Exorcista', autor: 'William Peter Blatty', imagen: 'assets/img/libroexorcista.webp' },
+    // agregar más categorías
+    { titulo: 'Romper el círculo', autor: 'Colleen Hoover', imagen: 'assets/img/romperelcirculo.webp' },
+    { titulo: 'Tan Poca Vida', autor: 'Hanya Yanagihara', imagen: 'assets/img/tanpocavida.webp' },
   ];
 
   librosFiltrados: any[] = [];

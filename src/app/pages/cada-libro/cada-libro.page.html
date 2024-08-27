@@ -8,5 +8,15 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
+  <ion-card>
+    <ion-card>
+      <ion-img [src]="libro.imagen"></ion-img>
+       <ion-card-header>
+         <ion-card-title>{{ libro.titulo }}</ion-card-title>
+       </ion-card-header>
+       <ion-card-content>
+         <p>{{ libro.autor }}</p>
+       </ion-card-content>
+     </ion-card>
+  </ion-card>
 </ion-content>

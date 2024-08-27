@@ -22,13 +22,9 @@ export class TodosLosLibrosPage implements OnInit {
   }
 
 
-  irDetallesLibro(libros: any){
-    let navigationextras: NavigationExtras = {
-      state: {
-        libros : libros
-      }
-    }
-    this.router.navigate(['/cada-libro'], navigationextras)
+  irDetallesLibro(){
+    
+    this.router.navigate(['/cada-libro'])
   }
 
 }

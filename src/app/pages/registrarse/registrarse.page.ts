@@ -12,6 +12,7 @@ export class RegistrarsePage implements OnInit {
   username: string | undefined;
   password: string | undefined;
   email: string | undefined;
+  passwordR: string | undefined;
 
 
     // el alertcontroller es para las pantallaz de errores emergentes, bueno no necesariamente de errores
@@ -30,10 +31,12 @@ export class RegistrarsePage implements OnInit {
   }
 
   validacionDatosCorreo(){
-    if(!this.username || !this.password || !this.email){
+    if(!this.username || !this.password || !this.email || !this.passwordR){
       this.MostrarAlerta('Se deben añadir todos los datos den los cuadros')
+    }else if(this.password !== this.passwordR){
+      this.MostrarAlerta('Las contraseñas son diferentes');
     }else{
-    this.Registrarse();
+     this.Registrarse();
     }
   }
 

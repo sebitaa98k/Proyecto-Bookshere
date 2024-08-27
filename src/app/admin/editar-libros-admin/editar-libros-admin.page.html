@@ -1,13 +1,34 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>editarLibrosAdmin</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar Libros </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">editarLibrosAdmin</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
+  <div class="container">
+    <ion-label>Editar Libro Libro</ion-label>
+    <ion-item>
+      <ion-input  label="Nombre Libro"  labelPlacement="floating"
+      placeholder="Ingrese el nombre del libro" value="Harry Potter"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input  label="Autor" labelPlacement="floating"
+      placeholder="Ingrese el nombre del autor" value="J.K rowling"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input  label="Categoria" labelPlacement="floating"
+      placeholder="Ingrese el tipo de categoria" value="Fantasia y magia"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-textarea class="input-desc" label="Descripcion" labelPlacement="floating"
+      value="Trata de un pibe que le gusta la magia y usa lentes, ademas de tener una marca en la frente y nose que mas, no lo vi"></ion-textarea>
+    </ion-item>
+    <ion-button  color="primary" type="submit" shape="round" [routerLink]="['/ver-libros-admin']">Actualizar Libro</ion-button>
+
+  </div>
+
 </ion-content>

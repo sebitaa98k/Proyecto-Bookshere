@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cambiar-contra',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CambiarContraPage implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit() {
+  }
+
+  irLogin(){
+    this.router.navigate(['/login'])
   }
 
 }

@@ -1,3 +1,10 @@
 Pages
-.recuperar contraseña 2
--notfound
+-not found
+
+-en perfil usuario añadir imagenes de libros
+
+-poners las variables en los inputs de editar libros
+
+-poner alertas al momento de borrar y editar los libros
+
+-Poner descripcion en el array y en el dettale de livro

@@ -8,8 +8,32 @@
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding"> 
-   
+   <ion-list>
+    <ion-item button [routerLink]="['/ver-libros-admin']">
+      <ion-icon slot="start" name="glasses-outline"></ion-icon>
+      <ion-label>Ver Libros</ion-label>
+    </ion-item>
+    
+    <ion-item button [routerLink]="['/anadir-libros-admin']" >
+      <ion-icon slot="start" name="add-outline"></ion-icon>
+      <ion-label>Añadir libros</ion-label>
+    </ion-item>
 
+    <ion-item button [routerLink]="['/editar-borrar-libro-admin']" >
+      <ion-icon slot="start" name="cloud-upload-outline"></ion-icon>
+      <ion-label>Editar Libros</ion-label>
+    </ion-item>
+
+    <ion-item button [routerLink]="['/editar-borrar-libro-admin']" >
+      <ion-icon slot="start" name="trash-outline"></ion-icon>
+      <ion-label>Borrar Libros</ion-label>
+    </ion-item>
+    <ion-item button [routerLink]="['/login']">
+      <ion-icon slot="start" name="exit-outline"></ion-icon>
+      <ion-label>Cerrar Sesion</ion-label>
+    </ion-item>
+
+   </ion-list>
   </ion-content>
 </ion-menu>
 <div class="ion-page" id="main-content">
@@ -22,12 +46,14 @@
     </ion-toolbar>
   </ion-header>
   <ion-content [fullscreen]="true" class="ion-padding">
-    <ion-grid>
-      <ion-row>
-        <ion-col>
+   
 
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <div>
+      <img src="assets/img/logoapp.png" alt="">
+      <p>Este es la seccion de andministracion. Arriba a la derecha esta el menu donde podras administrar los libros.
+        Administra con responsabilidad.
+      </p>
+    </div>
+
   </ion-content>
 </div>

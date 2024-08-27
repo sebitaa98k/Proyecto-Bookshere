@@ -9,28 +9,69 @@
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <!-- Contenedor principal con fondo -->
-  <div class="register-container">
+  <div class="container">
     <!-- Logo de la app -->
     <img src="assets/img/logoapp.png" alt="Logo" class="app-logo" />
 
     <!-- Formulario de Crear Cuenta -->
-    <form >
+    <form>
       <ion-item class="form-item">
-        <ion-label position="floating">Nombre</ion-label>
-        <ion-input type="text" [(ngModel)]="username" name="username" required></ion-input>
+        <ion-input
+          label="Nombre"
+          type="text"
+          labelPlacement="floating"
+          [(ngModel)]="username"
+          name="username"
+          placeholder="Ingrese el usuario"
+          
+        ></ion-input>
       </ion-item>
 
       <ion-item class="form-item">
-        <ion-label position="floating">Correo Electrónico</ion-label>
-        <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+        <ion-input
+          label="Email"
+          type="text"
+          labelPlacement="floating"
+          [(ngModel)]="email"
+          name="email"
+          placeholder="Ingrese el email"
+          
+        ></ion-input>
       </ion-item>
 
       <ion-item class="form-item">
-        <ion-label position="floating">Contraseña</ion-label>
-        <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+        <ion-input
+          label="Contraseña"
+          type="password"
+          labelPlacement="floating"
+          [(ngModel)]="password"
+          name="password"
+          placeholder="Ingrese la contraseña"
+          
+        ></ion-input>
       </ion-item>
 
-      <ion-button expand="full" color="primary" type="submit" (click)="validacionDatosCorreo()">Crear Cuenta</ion-button>
+      <ion-item class="form-item">
+        <ion-input
+          label="Repetir Contraseña"
+          type="password"
+          labelPlacement="floating"
+          [(ngModel)]="passwordR"
+          name="passwordR"
+          placeholder="Repita la contraseña"
+          
+        ></ion-input>
+      </ion-item>
+
+
+      <ion-button
+        shape="round"
+        expand="full"
+        color="primary"
+        type="submit"
+        (click)="validacionDatosCorreo()"
+        >Crear Cuenta</ion-button
+      >
     </form>
   </div>
 </ion-content>

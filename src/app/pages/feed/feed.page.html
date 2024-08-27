@@ -8,11 +8,23 @@
     <ion-list>
       <ion-item button (click)="irPerfilUsuario()">
         <ion-icon slot="start" name="person-circle-outline"></ion-icon>
-        <ion-label>{{usuario}}</ion-label>
+        <ion-label>{{usuario|uppercase}}</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/libros-estrenos']">
+        <ion-icon slot="start"name="globe-outline"></ion-icon>
+        <ion-label>Libros Estrenos</ion-label>
       </ion-item>
       <ion-item button (click)="irTodosLosLibros()">
         <ion-icon slot="start"name="book-outline"></ion-icon>
         <ion-label>Todos los Libros</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/acercade']">
+        <ion-icon slot="start" name="trophy-outline"></ion-icon>
+        <ion-label>Sobre Nosotros</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/ajustes']">
+        <ion-icon slot="start" name="construct-outline"></ion-icon>
+        <ion-label>Ajustes</ion-label>
       </ion-item>
       <ion-item button (click)="cerrarSesion()">
         <ion-icon slot="start" name="exit-outline"></ion-icon>
@@ -41,15 +53,15 @@
       <h2>Mis Libros</h2>
     </ion-text>
     <ion-grid>
-      <ion-row>
+      <ion-row [routerLink]="['/cada-libro']">
         <ion-col size="4">
-          <ion-img src="assets/img/mis-libros1.jpg"></ion-img>
+          <ion-img src="assets/img/librohp1.webp"></ion-img>
         </ion-col>
         <ion-col size="4">
-          <ion-img src="assets/img/mis-libros2.jpg"></ion-img>
+          <ion-img src="assets/img/librohp2.webp"></ion-img>
         </ion-col>
         <ion-col size="4">
-          <ion-img src="assets/img/mis-libros3.jpg"></ion-img>
+          <ion-img src="assets/img/librohp3.webp"></ion-img>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -59,7 +71,7 @@
       <h2>Libros Populares</h2>
     </ion-text>
     <ion-grid>
-      <ion-row>
+      <ion-row [routerLink]="['/cada-libro']">
         <ion-col size="4">
           <ion-img src="assets/img/romperelcirculo.webp"></ion-img>
         </ion-col>
@@ -75,22 +87,22 @@
     <!-- Sección de Categoría de Libros -->
     <ion-text color="primary">
       
-        <h2>Categoría de Libros</h2>
+        <h2>Libros en Estreno</h2>
       
     </ion-text>
     <ion-grid>
       <ion-row>
         <ion-col size="4">
-          <ion-text color="primary">Clásicos</ion-text>
-          <ion-img src="assets/img/categoriaclasicos.jpeg"></ion-img>
+          
+          <ion-img src="assets/img/Elmejorlibrodelmundo.webp"></ion-img>
         </ion-col>
         <ion-col size="4">
-          <ion-text color="primary">Terror</ion-text>
-          <ion-img src="assets/img/categoriaterror.avif"></ion-img>
+          
+          <ion-img src="assets/img/quedaraelamor.webp"></ion-img>
         </ion-col>
         <ion-col size="4">
-          <ion-text color="primary">Fantasía</ion-text>
-          <ion-img src="assets/img/categoriafantasia.jpeg"></ion-img>
+          
+          <ion-img src="assets/img/mesaparados.webp"></ion-img>
         </ion-col>
       </ion-row>
     </ion-grid>

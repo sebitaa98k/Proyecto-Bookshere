@@ -11,13 +11,13 @@
   <ion-grid>
     <ion-row>
       <ion-col size="12" size-md="6" size-lg="1" *ngFor="let libro of Libros" >
-        <ion-card (click)="irDetallesLibro(libro)">
-         <ion-img [src]="libro.image"></ion-img>
+        <ion-card (click)="irDetallesLibro()">
+         <ion-img [src]="libro.imagen"></ion-img>
           <ion-card-header>
-            <ion-card-title>{{ libro.title }}</ion-card-title>
+            <ion-card-title>{{ libro.titulo }}</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <p>{{ libro.author }}</p>
+            <p>{{ libro.autor }}</p>
           </ion-card-content>
         </ion-card>
       </ion-col>

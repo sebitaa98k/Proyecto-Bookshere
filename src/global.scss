@@ -58,11 +58,20 @@ ion-content {
    
    // Este es para cambiar el fondo de los items del side menu, osea el iniciar sesion, crear usuario, etc
    ion-item{
-       --background: #d3bc91 ;
+       --background:  ;
        --color: #6D4C41; 
+   }
+   ion-label{
+    --color: #6D4C41;
+    --font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   }
+
+   ion-title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    }
    
    // Este es la parte para cambiar el color del icono de los items del side menu, lo saque a traves de los elementos de la pagina
    ion-icon.md.hydrated {
        color: #6D4C41;  
    }
+
